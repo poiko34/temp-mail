@@ -1,101 +1,74 @@
-# Temp Mail Script
+# Temp Mail Script (Debian-Based Systems)
 
-This is a Python-based script that registers a temporary email address and listens for incoming emails.
+This is a Python-based script designed for **Debian-based systems** (such as Debian, Ubuntu, Kali Linux, etc.). It registers a temporary email address and listens for incoming emails.
 
 ## Features
 - Register a temporary email address
 - Listen for incoming emails
-- Print subject and content of the emails
+- Print the subject and content of received emails
 
 ## Prerequisites
 
 Before running the script, ensure the following:
 
+- **Debian-based OS** (Debian, Ubuntu, Kali, etc.)
 - **Python 3** is installed on your system
-- You have the necessary permissions to install packages and make changes to your system
+- You have the necessary permissions to install packages and make system changes
 
 ## Installation
 
 Follow these steps to install and set up the environment for the script:
 
-1. **Clone the repository (optional)**
+### 1. Clone the repository (optional)
 
-    If you're using git, you can clone the repository to your local machine:
+If you're using Git, you can clone the repository to your local machine:
 
-    ```bash
-    git clone https://github.com/poiko34/temp-mail.git
-    cd temp-mail
-    ```
+```bash
+git clone https://github.com/poiko34/temp-mail.git
+cd temp-mail
+```
 
-2. **Run the setup script**
+### 2. Run the setup script
 
-    The `setup.sh` script will install necessary dependencies and set up the virtual environment for the project.
+The `setup.sh` script will install necessary dependencies and set up the virtual environment for the project.
 
-    ```bash
-    chmod +x setup.sh
-    ./setup.sh
-    ```
+```bash
+chmod +x setup.sh
+./setup.sh
+```
 
-    This script does the following:
-    - Installs Python virtual environment (`python3-venv`)
-    - Installs necessary Python packages
-    - Makes the `mail.py` script executable
-    - Creates a symbolic link to the script, allowing you to run it as a command
+This script does the following:
+- Installs Python virtual environment (`python3-venv`)
+- Installs necessary Python packages
+- Makes the `mail.py` script executable
+- Creates a symbolic link to the script, allowing you to run it as a command
 
-3. **Manual Installation (Optional)**
+### 3. Running the Script
 
-    If you don't want to use the `setup.sh` script, you can manually install dependencies:
+To run the script, simply use the `mail` command:
 
-    - Install `python3-venv`:
-      ```bash
-      sudo apt install python3-venv
-      ```
+```bash
+mail
+```
 
-    - Create and activate a virtual environment:
-      ```bash
-      python3 -m venv myenv
-      source myenv/bin/activate
-      ```
+The script will listen for incoming emails, print the subject, and display the content.
 
-    - Install required Python packages:
-      ```bash
-      pip install MailTm
-      ```
+### 4. Usage
 
-    - Install `pipx` for running Python apps in isolated environments:
-      ```bash
-      sudo apt install pipx
-      pipx install MailTm
-      ```
+You can specify a username to register with the following command:
 
-4. **Running the Script**
+```bash
+mail -n yourusername
+```
 
-    To run the script, simply use the `mail` command:
+If no username is specified, the script will **automatically generate a random username** by default.
 
-    ```bash
-    mail
-    ```
+## Compatibility
 
-    The script will listen for incoming emails, print the subject, and the content of the email.
+✅ Works on:
+- **Debian**
+- **Ubuntu**
+- **Kali Linux**
+- **Other Debian-based distributions**
 
-5. **Usage**
-
-    You can specify a username to register with the following command:
-
-    ```bash
-    mail -n yourusername
-    ```
-
-    If no username is specified, the script will generate a random username by default.
-
-6. **Deactivating the Virtual Environment**
-
-    If you used a virtual environment, you can deactivate it when you're done:
-
-    ```bash
-    deactivate
-    ```
-
-## Troubleshooting
-
-- If you encounter the following error:
+❌ **Not tested on non-Debian systems.** If you use another distribution, you may need to adjust the installation process.
