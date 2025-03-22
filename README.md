@@ -86,7 +86,7 @@ Follow these steps to install and set up the environment for the script:
     mail -n yourusername
     ```
 
-    If no username is specified, the script will use a default value of `NULL`.
+    If no username is specified, the script will generate a random username by default.
 
 6. **Deactivating the Virtual Environment**
 
