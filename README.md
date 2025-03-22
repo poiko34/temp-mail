@@ -23,8 +23,8 @@ Follow these steps to install and set up the environment for the script:
     If you're using git, you can clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/temp-mail-script.git
-    cd temp-mail-script
+    git clone https://github.com/poiko34/temp-mail.git
+    cd temp-mail
     ```
 
 2. **Run the setup script**
