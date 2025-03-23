@@ -6,7 +6,16 @@ from mailtm import Email
 def listener(message):
     """Function to handle incoming messages"""
     print("\nSubject: " + message['subject'])
-    print("Content: " + (message['text'] if message['text'] else message['html']))
+
+    # Check if 'text' or 'html' keys exist in the message and display the content
+    if 'text' in message and message['text']:
+        print("Content: " + message['text'])
+    elif 'html' in message and message['html']:
+        # If 'html' is a list, join the elements into a single string
+        html_content = ''.join(message['html']) if isinstance(message['html'], list) else message['html']
+        print("Content: " + html_content)
+    else:
+        print("Content: Пусто")  # Message is empty
 
 # Create an argument parser
 parser = argparse.ArgumentParser(description="Script to register a mail and listen for incoming messages")
