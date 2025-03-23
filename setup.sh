@@ -16,7 +16,5 @@ chmod +x /mail.py
 # Создаем символическую ссылку для запуска команды mail
 ln -s /mail.py /usr/local/bin/mail
 
-# Деактивируем виртуальное окружение
-deactivate
 clear
 echo Installation complete
